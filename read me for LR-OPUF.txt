@@ -1,0 +1,6 @@
+This readme file only explains the LR-OPUF.py file used in Chapter 3.
+The LR-OPUF.py file is used in Chapter 3. 
+
+LR-OPUF.py is a Python implementation of the LR-OPUF protocol. 
+The protocol design is referenced in the article "Lightweight and Privacy-Preserving Reconfigurable Authentication Scheme for IoT Devices."
+The full citation for this article is as follows: P. Gope, F. Hongming and B. Sikdar, "Lightweight and Privacy-Preserving Reconfigurable Authentication Scheme for IoT Devices," in IEEE Transactions on Services Computing, vol. 18, no. 2, pp. 912-925, March-April 2025, doi: 10.1109/TSC.2025.3536314.
