@@ -1,0 +1,25 @@
+# First, modify some parameters to fixed values ​​to ensure consistency.
+PUF_list = PUFs(stages=64)
+PUF_list.seed = 123
+CRP_seed = 45 # Fixed seed for easy reproduction
+
+N_train = 3000000
+# Choose one PUF to be model
+PUF_list.add_XOR_PUF(k=7,num=1)
+
+
+
+
+
+# Then add the code to save the PUF data in these two lines of code:
+responses = np.array(responses)
+# print(responses.shape)
+
+# add
+# === Save the same source data as lr_opuf (c after parity + one-dimensional XOR response y) ===
+np.save('data/synth_c.npy', c.astype(np.int8))
+np.save('data/synth_y.npy', responses.reshape(-1).astype(np.int8))
+print('saved:', 'data/synth_c.npy', 'data/synth_y.npy')
+# add end
+
+train_c,test_c,train_r,test_r = train_test_split(c,responses.T,test_size=0.2, random_state=42)
